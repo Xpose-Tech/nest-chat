@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+  dbchat:
+    container_name: dbchat
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    volumes:
+      - $PWD/my-db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'HDbwdIx3dlJ'
+      MYSQL_DATABASE: rhythmoya
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 'HDbwdIx3dlJ'
